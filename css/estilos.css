@@ -1,4 +1,3 @@
-/*Topo*/
 .bg-topo{
 	background-color: #00AFEF;
 }
@@ -9,4 +8,28 @@
 
 .overlay{
 	background-color: #0000006e;
+}
+
+.bg-footer{
+	background-color: #045a88;
+}
+
+/*col-xl*/
+@media (min-width: 1200px){
+	.card-columns{column-count:4}
+}
+
+/*col-lg*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+	.card-columns{column-count:4}
+}
+
+/*col-md*/
+@media (min-width: 768px) and (max-width: 991.98px){
+	.card-columns{column-count:3}
+}
+
+/*col-sm*/
+@media (min-width: 576px) and (max-width: 767.98px){
+	.card-columns{column-count:2}
 }
