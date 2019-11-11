@@ -15,17 +15,29 @@
 </head>
 <body>
 
+	<!-- Header -->
+	<!-- Classes container-fluid e container
+	container-fluid: Esta classe deve ser utilizada quando é necessário que a div utilize a tela inteira sem deixar margens
+	container: Esta classe deixara uma marge responsiva para que os componentes fiquem "mais centralizados" na tela, ela irá se adaptar para que, quando a tela seja pequena (telefone ou table) tenha o mesmo efeito da container-fluid e não deixe margem, mas quando for telas grandes (computadores), irá deixar uma largura agradável entre as laterais da tela e o inicio do conteudo na página.
+	 -->
 	<div class="container-fluid bg-topo">
 		<!-- Barra de navegação -->
+		<!-- Posso mesclar utilizando uma container-fluid que pegara a tela toda e dentro dela uma container para deixar as margens -->
 		<header class="container">
+
+			<!-- Adiciona a barra de navegação -->
 			<nav class="navbar navbar-expand-lg navbar-dark">
+				<!-- Adiciona a logo -->
 				<a class="navbar-brand" href="#">
 					<img src="img/logo.png" width="70" alt="logo">
 				</a>
+
+				<!-- Adiciona o botão do menu que só será visto nos dispositivos móveis -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
 					<span class="navbar-toggler-icon text-light"></span>
 				</button>
 
+				<!-- Adiciona menu com a classe collpase que recolhe e espande o menu quando ele for exibido em um dispositovo móvel-->
 				<div class="collapse navbar-collapse" id="menu">
 					<hr class="bg-white">
 					<ul class="navbar-nav mr-auto text-white">
@@ -53,6 +65,7 @@
 							</div>
 						</li>
 					</ul>
+					<!-- Adiciona formulário de busca -->
 					<form class="form-inline my-2 my-lg-0">
 						<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
 						<button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
@@ -63,15 +76,22 @@
 	</div>
 
 	<!-- Carousel -->
+	<!-- Adiciona a seção de banenrs utilizando a classe container-fluid para pegar a tela toda e retira (zera) o padding com a classe p-0 -->
 	<div class="container-fluid p-0">
+		<!-- Utiliza a classe carousel slide para que o bootstrap saiba que ali será um componente de imagem e a classe slide é utilizada para que ele passe as imagens automaticamente
+
+		Outro ponto importante é o nome da div id="carousel" ele será utilizado para ligar os botões de avançar e voltar co componente carrousel -->
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner">
+				<!-- Aqui cria-se uma imagem (item) do carousel através da classe carousel-item a classe active define qual será a imagem ativa ao abrir o site pela primeira vez -->
 				<div class="carousel-item active">
 					<img src="img/eati-2019.png" class="d-block w-100" alt="eati-2019">
 				</div>
 				<div class="carousel-item">
 					<img src="img/eati-6.png" class="d-block w-100" alt="...">
 				</div>
+
+				<!-- neste ponto cria-se os botões de avançar e voltar notem que o href dos botões estão apontado para o nome do carousel através do #carousel -->
 				<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="sr-only">Volar</span>
@@ -84,9 +104,12 @@
 		</div>
 	</div>	
 
+	<!-- Notícias -->
 	<div class="container-fluid bg-cinza">
 		<div class="container py-4">
+			<!-- Para criar a seção de noticiar utilizei novamente os container para uma melhor armonia/organização do site e os cards-columns componente do bootstrap 4 -->
 			<div class="card-columns">
+				<!-- Aqui criou-se um card simples comente com texto e imagem  -->
 				<div class="card">
 					<img src="img/cronograma.png" class="card-img-top shadow-sm" alt="cronograma eati">
 					<div class="card-body">
@@ -165,8 +188,12 @@
 		</div>
 	</div>
 
+	<!-- Parceiros -->
 	<div class="container">
+		<!-- Nos parceiros foi utilizado o esquema de colunas através das calsses row, que define que está é uma linha e dentro dela haverá colunas (no maximo 12)
+		a classe justify-content-center diz ao bootstrap que todas as colunas serão centralizadas ao meio da página o tempo todo, ja a classe justify-content-md-start diz que as colunas quando a resolução da tela for MD, ou seja, quando a largura da tela estiver entre ≥768px ou < 991px, as colunas serão alinhadas no inicio (à esqueda) da página.-->
 		<div class="row justify-content-center justify-content-md-start py-4">
+			<!-- A primeira coluna eu ocuparei a tela toda atraves da classe col-12 que informa que sempre serã utilizado as 12 colunas, não importando a largura da tela -->
 			<div class="col-12">
 				<div class="text-center">
 					<h4 class="text-info text-uppercase">Patrocinadores</h4>
@@ -174,6 +201,7 @@
 				<hr>
 			</div>
 
+			<!-- Neste ponto onde coloco as imagens, informo que sempre utilizarei 6 colunas, ou seja, metade da tela, porém, quando a largura da tela for sm (≥576px) ela ocupará 4 colunas na tela, quando for MD (≥768px) ocupara duas colunas na tela -->
 			<div class="col-6 col-sm-4 col-md-2 mb-1 p-1">
 				<img src="img/patrocinadores/nelogica.png" class="img-thumbnail mr-auto d-block" alt="">
 			</div>
@@ -216,6 +244,7 @@
 		</div>
 	</div>
 
+	<!-- Footer -->
 	<footer class="container-fluid bg-footer">
 		<div class="container py-5">
 			<div class="row">

@@ -14,7 +14,10 @@
 	background-color: #045a88;
 }
 
+/*Personalizando colunas dos cards do BS4 com media queries*/
 /*col-xl*/
+
+/*Este trecho de css foi utilizado para evitar a quebra dos cards do bootstrap, desta forma conseguimos controlar quantas colunas serão exibidas em cada tipo de resolução de tela*/
 @media (min-width: 1200px){
 	.card-columns{column-count:4}
 }
